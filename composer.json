@@ -1,0 +1,14 @@
+{
+    "require": {
+        "twig/twig": "~3.0"        
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    }
+}

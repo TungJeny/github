@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block header %} <link href="/admin_template/common/common.css" rel="stylesheet"> {% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="container">
+        <div class="team-single">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 xs-margin-30px-bottom">
+                    <div class="team-single-img">
+                        <img src="{{ avatar }}" alt="">
+                    </div>
+                    <div class="bg-light-gray padding-30px-all md-padding-25px-all sm-padding-20px-all text-center">
+                        <h4 class="margin-10px-bottom font-size24 md-font-size22 sm-font-size20 font-weight-600">{{ usernameGithub }}</h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-7">
+                    <div class="team-single-text padding-50px-left sm-no-padding-left">
+                        
+                        <h4 class="font-size38 sm-font-size32 xs-font-size30">Info github</h4>
+                        <div class="contact-info-section margin-40px-tb">
+                            <ul class="list-style9 no-margin">
+                                {% for key, item in user %}
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-5 col-5">
+                                                <i class="far fa-file text-lightred"></i>
+                                                <strong class="margin-10px-left text-orange">{{ key }}:</strong>
+                                            </div>
+                                            <div class="col-md-7 col-7">
+                                                <p>{{ item|e }}</p>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                {% endfor %}
+                                
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
